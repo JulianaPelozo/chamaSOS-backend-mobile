@@ -16,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/JulianaPelozo/chamaSOS-backend-mobile/issues"
   },
-  "homepage": "https://github.com/JulianaPelozo/chamaSOS-backend-mobile#readme"
+  "homepage": "https://github.com/JulianaPelozo/chamaSOS-backend-mobile#readme",
+  "dependencies": {
+    "typescript": "^5.9.3"
+  },
+  "devDependencies": {
+    "tsx": "^4.21.0"
+  }
 }
