@@ -9,7 +9,7 @@ export const AppDataSource = new DataSource({
   username: process.env.DB_USER ?? 'root',
   password: process.env.DB_PASS ?? 'root',
   database: process.env.DB_NAME ?? 'chama_sos',
-  synchronize: true, // dev only
+  synchronize: true, 
   logging: false,
   entities: [Ocorrencia],
 });
