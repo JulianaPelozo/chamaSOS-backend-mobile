@@ -3,10 +3,10 @@ import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, UpdateDateCol
 export type Prioridade = 'Baixa' | 'Média' | 'Crítica';
 export type Status = 'Ativa' | 'Encerrada';
 
-@Entity()
+@Entity({ name: 'ocorrencias' })
 export class Ocorrencia {
   @PrimaryGeneratedColumn()
-  id!: number; // Use o "!" para garantir que será preenchido pelo TypeORM
+  id!: number;
 
   @Column()
   tipo!: string;
@@ -19,6 +19,18 @@ export class Ocorrencia {
 
   @Column({ type: 'enum', enum: ['Ativa', 'Encerrada'], default: 'Ativa' })
   status!: Status;
+
+  @Column({ type: 'int', default: 0 })
+  numVitimas!: number;
+
+  @Column({ type: 'decimal', precision: 10, scale: 2, default: 0 })
+  custo!: number;
+
+  @Column({ nullable: true })
+  batalhao?: string;
+
+  @Column({ type: 'text', nullable: true })
+  descricao?: string;
 
   @CreateDateColumn()
   createdAt!: Date;
