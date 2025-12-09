@@ -22,7 +22,7 @@ app.use('/api/ocorrencias', ocorrenciaRoutes);
 AppDataSource.initialize()
   .then(() => {
     console.log('Conectado ao banco MySQL');
-    app.listen(PORT, () =>
+    app.listen(PORT, '0.0.0.0', () =>
       console.log(`Servidor rodando na porta ${PORT}`)
     );
   })
